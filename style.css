@@ -20,7 +20,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	background: #22171e;
-	font-family: "BOOTLE";
+	font-family: 'BOOTLE', sans-serif;
 }
 
 .blocks-0{
@@ -114,7 +114,7 @@ img {
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
-	font-family: "BOOTLE";
+	font-family: 'BOOTLE', sans-serif;
 	font-size: 24px;
 	line-height: 100px;
 	text-transform: uppercase;
@@ -128,7 +128,7 @@ img {
 	padding: 0 40px;
 	display: flex;
 	justify-content: space-between;
-	font-family: "BOOTLE";
+	font-family: 'BOOTLE', sans-serif;
 	text-transform: uppercase;
 	line-height: 100px;
 	color: #8d785b;
