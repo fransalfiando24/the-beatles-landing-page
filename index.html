@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Animation TweenMax | Codegrid</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/bootle" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+</head>
+<body>
+    <div class="site-logo" style="text-align: center;"></div>
+    <div class="navbar">
+        <div class="site-info">photos</div>
+        <div class="site-menu">
+            <div class="menu-item">albums</div>
+            <div class="menu-item">about</div>
+            <div class="menu-item">contact</div>
+        </div>
+    </div>
+    <div class="showreel">
+        <img src="Beatles1.jpg" alt="">
+        <div class="song">
+            <p class="title">Don't Let Me Down</p>
+            <div class="play-btn">
+                <a href="#" class="prev" onclick="prevSong()"><i class="fa fa-backward"></i></a>
+                <a href="#" class="play-pause" onclick="togglePlayPause()"><i class="fa fa-play"></i></a>
+                <a href="#" class="next" onclick="nextSong()"><i class="fa fa-forward"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrapper-img">
+            <div class="box"></div>
+            <div>
+                <img src="beatles4.jpg" class="img">
+            </div>
+        </div>
+        <div class="wrapper-img2">
+            <div class="box"></div>
+            <div>
+                <img src="Beatles1.jpg" class="img">
+            </div>
+        </div>
+        <div class="circle-shape"></div>
+        <div class="circle-shape-2"></div>
+        <div class="circle-shape-3"></div>
+        <div class="blocks-0">The</div>
+        <div class="blocks">
+            <div class="blocks-1 block">B</div>
+            <div class="blocks-2 block">E</div>
+            <div class="blocks-3 block">A</div>
+            <div class="blocks-4 block">T</div>
+            <div class="blocks-5 block">L</div>
+            <div class="blocks-6 block">E</div>
+            <div class="blocks-7 block">S</div>
+        </div>
+    </div>
+    <script>
+        TweenMax.to(".blocks-0",2,{
+            x:"-60",
+            y:"-120",
+            scale:"1.5",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-1",2,{
+            x:"-270",
+            y:"-180",
+            scale:"0.7",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-2",2,{
+            x:"-170",
+            y:"150",
+            scale:"2.4",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-3",2,{
+            x:"-130",
+            y:"-60",
+            scale:"1.2",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-4",2,{
+            x:"15",
+            y:"30",
+            scale:"1.2",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-5",2,{
+            x:"130",
+            y:"-190",
+            scale:"1.5",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-6",2,{
+            x:"245",
+            y:"120",
+            scale:"0.9",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".blocks-7",2,{
+            x:"380",
+            y:"-100",
+            scale:"2.1",
+            ease: Expo.easeInOut,
+        });
+        TweenMax.to(".box", 2.4, {
+			y: "-100%",
+			ease: Expo.easeInOut,
+		});
+        TweenMax.from(".circle-shape", 2.4,{
+            scale: 0,
+            ease: Expo.easeInOut,
+        });
+        TweenMax.from(".circle-shape-2", 2.4,{
+            scale: 0,
+            ease: Expo.easeInOut,
+        });
+        TweenMax.from(".circle-shape-3", 2.4,{
+            scale:0,
+            ease: Expo.easeInOut,
+        });
+        TweenMax.from(".navbar > div", 1.6, {
+			opacity: 0,
+			y: 60,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+        TweenMax.from(".site-logo", 1.6, {
+			opacity: 0,
+			y: 40,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+        TweenMax.from(".showreel", 1.6, {
+			opacity: 0,
+			y: 40,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+        TweenMax.staggerFrom(".site-menu > div", 1,
+        {
+            opacity: 0,
+            y: 60,
+            ease : Power2.easeOut,
+        },
+        0.2
+        );
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
